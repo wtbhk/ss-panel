@@ -169,6 +169,7 @@ class AuthController extends BaseController
         $user->invite_num = Config::get('inviteNum');
         $user->reg_ip = Http::getClientIP();
         $user->ref_by = $c->user_id;
+	$user->method = 'chacha20-ietf-poly1305'; //added by leps
 
         if ($user->save()) {
             $res['ret'] = 1;

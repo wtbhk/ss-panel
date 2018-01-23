@@ -73,6 +73,10 @@ class Node extends Model
 
     public static function getCustomerMethod()
     {
+	// edited by leps
+	return [
+            "chacha20-ietf-poly1305" => "chacha20-ietf-poly1305",
+	];
         return [
             "rc4-md5" => "rc4-md5",
             "aes-128-cfb" => "aes-128-cfb",
